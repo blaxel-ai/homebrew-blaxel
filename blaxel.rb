@@ -5,12 +5,12 @@
 class Blaxel < Formula
   desc ""
   homepage "https://www.blaxel.ai"
-  version "0.0.72"
+  version "0.0.73"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/beamlit/toolkit/releases/download/v0.0.72/blaxel_Darwin_x86_64.tar.gz"
-      sha256 "ed02aac4c64929d9646902d51413c20ace24ac0a2c2eacdf752f50b66912cbcc"
+      url "https://github.com/beamlit/toolkit/releases/download/v0.0.73/blaxel_Darwin_x86_64.tar.gz"
+      sha256 "704c41c9448a85c2ade74c8c67a46d0cda0c84e2e7eea661a359c3534382eebd"
 
       def install
         bin.install "blaxel"
@@ -18,8 +18,8 @@ class Blaxel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/beamlit/toolkit/releases/download/v0.0.72/blaxel_Darwin_arm64.tar.gz"
-      sha256 "8596fb7babbc3ba1b62764538604df8365001ad2bc17469b962e4815e5aa993c"
+      url "https://github.com/beamlit/toolkit/releases/download/v0.0.73/blaxel_Darwin_arm64.tar.gz"
+      sha256 "b96e2a64fa79a05cdb67a2ee65c688a65c1a4913be1bba0873b90868399cecd8"
 
       def install
         bin.install "blaxel"
@@ -31,8 +31,8 @@ class Blaxel < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/beamlit/toolkit/releases/download/v0.0.72/blaxel_Linux_x86_64.tar.gz"
-        sha256 "4cf871c7b73ff50209dda1d49065a692bd0e14ff75f8c5fe7172456a6a7f3fa9"
+        url "https://github.com/beamlit/toolkit/releases/download/v0.0.73/blaxel_Linux_x86_64.tar.gz"
+        sha256 "124a2948a31d4c0c01217a57c5779c98f3778cdf23291fc3f68d757324d160a7"
 
         def install
           bin.install "blaxel"
@@ -42,8 +42,8 @@ class Blaxel < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/beamlit/toolkit/releases/download/v0.0.72/blaxel_Linux_arm64.tar.gz"
-        sha256 "34bdf6a91170541394edf7ccbd73a9e20e965c71e8e1c8271010cf574e5d97b2"
+        url "https://github.com/beamlit/toolkit/releases/download/v0.0.73/blaxel_Linux_arm64.tar.gz"
+        sha256 "eac50ab6bdfe048e6f32a0e39a1b60e28425d2450a33b97edbc2d307fcc3f634"
 
         def install
           bin.install "blaxel"
