@@ -5,12 +5,12 @@
 class Blaxel < Formula
   desc ""
   homepage "https://www.blaxel.ai"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/beamlit/toolkit/releases/download/v0.1.9/blaxel_Darwin_x86_64.tar.gz"
-      sha256 "b4191daae95eef2a1e7f5f466ee1f4c8a81c3d382d8b6671d343daaa7183bd4f"
+      url "https://github.com/beamlit/toolkit/releases/download/v0.1.10/blaxel_Darwin_x86_64.tar.gz"
+      sha256 "2c25806ace934fc1acc8ecd3f4d4fcca810926b9ff1ca1f74132add8825033e3"
 
       def install
         bin.install "blaxel"
@@ -18,8 +18,8 @@ class Blaxel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/beamlit/toolkit/releases/download/v0.1.9/blaxel_Darwin_arm64.tar.gz"
-      sha256 "5ae6fef84bc75d03258a44aa4a5e39d8aff1ebfb165c2b81fc416e4b3db389f7"
+      url "https://github.com/beamlit/toolkit/releases/download/v0.1.10/blaxel_Darwin_arm64.tar.gz"
+      sha256 "62ecee2fc8f6b3d7c893437b1c05b46155f35175f257ad5b6a6bd31e126a560d"
 
       def install
         bin.install "blaxel"
@@ -29,26 +29,20 @@ class Blaxel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/beamlit/toolkit/releases/download/v0.1.9/blaxel_Linux_x86_64.tar.gz"
-        sha256 "a7494f63d19ef109a1a2c12695d87063e5f34f6e4c6cd04a9d6b1b7fe57763f0"
-
-        def install
-          bin.install "blaxel"
-          bin.install_symlink "blaxel" => "bl"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/beamlit/toolkit/releases/download/v0.1.10/blaxel_Linux_x86_64.tar.gz"
+      sha256 "42176e20be5972a44fe58e6764d28cdd70d3576d2aa7f390ec1672eaa9143d1e"
+      def install
+        bin.install "blaxel"
+        bin.install_symlink "blaxel" => "bl"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/beamlit/toolkit/releases/download/v0.1.9/blaxel_Linux_arm64.tar.gz"
-        sha256 "dc7611c39c5abf3a395c049f4f2122b5c92f3a4699ff3ca85f41da33fc43dadb"
-
-        def install
-          bin.install "blaxel"
-          bin.install_symlink "blaxel" => "bl"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/beamlit/toolkit/releases/download/v0.1.10/blaxel_Linux_arm64.tar.gz"
+      sha256 "b4c5eb31c79b92ef9b988602a2edc4f3bb8df71a63e4d3b25b0ad1d185ee9203"
+      def install
+        bin.install "blaxel"
+        bin.install_symlink "blaxel" => "bl"
       end
     end
   end
