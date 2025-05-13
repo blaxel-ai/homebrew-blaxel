@@ -10,7 +10,7 @@ class Blaxel < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.15/blaxel_Darwin_x86_64.tar.gz"
-      sha256 "00d95118b90fa39dc0ec4cef5b9f3ea2213561ccdc887e31be8049a7aef59c8c"
+      sha256 "95ad3e59cdf1b7ce7f05cab270d33cb2025bfb7e0b45a0a92162ea30b1b73a8b"
 
       def install
         bin.install "blaxel"
@@ -31,7 +31,7 @@ class Blaxel < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.15/blaxel_Linux_x86_64.tar.gz"
-      sha256 "d801b307b9efd685b0b616ecc8296bb4a1fe5bb90cd92be979312cfa4fbe7a57"
+      sha256 "6a2864389613af2b8ea7509b3c4b528639aca00e0068a684c9c90990c55b8dbd"
       def install
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
@@ -39,7 +39,7 @@ class Blaxel < Formula
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.15/blaxel_Linux_arm64.tar.gz"
-      sha256 "e06e217e74af0ac75dfc80f524f866a78084ee1220750b408dddf6f0230b8b43"
+      sha256 "9ebe9e286485024f984b3f764b3657e3863c88a874cb789a7a2ffeaf408623c4"
       def install
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
