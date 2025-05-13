@@ -19,7 +19,7 @@ class Blaxel < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.15/blaxel_Darwin_arm64.tar.gz"
-      sha256 "0e54a91ad567ff155484aa03728b3238e902896e94ff84417161877251a1f99a"
+      sha256 "7a6e346f73f1673ae7bc329078767267f5f62353e24208a3555c6b0440eeaccd"
 
       def install
         bin.install "blaxel"
