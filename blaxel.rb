@@ -5,12 +5,12 @@
 class Blaxel < Formula
   desc ""
   homepage "https://www.blaxel.ai"
-  version "0.1.36"
+  version "0.1.37"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.36/blaxel_Darwin_x86_64.tar.gz"
-      sha256 "8c4afb39292cc2aca00225b944caf4eaf7d2c861df8e8d60f8a2383876423724"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.37/blaxel_Darwin_x86_64.tar.gz"
+      sha256 "bf2c48995546f4cacef26e98686a2c8e63641ef5e804651eea72935fb422efac"
 
       def install
         bin.install "blaxel"
@@ -18,8 +18,8 @@ class Blaxel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.36/blaxel_Darwin_arm64.tar.gz"
-      sha256 "533401e635a74cd26c1b8871f3d29b270d8a71264abea6fe8db060921e3b4625"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.37/blaxel_Darwin_arm64.tar.gz"
+      sha256 "c31b92bf0153158bb02281737737895078088126a323c06fb876212f05617862"
 
       def install
         bin.install "blaxel"
@@ -30,16 +30,16 @@ class Blaxel < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.36/blaxel_Linux_x86_64.tar.gz"
-      sha256 "c4bb794315430d71dee848909fff62fba31105c552cd8d912e319a892d10f0bd"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.37/blaxel_Linux_x86_64.tar.gz"
+      sha256 "b7eea7e67bfb0a6ae0a8690f10ebd3a13a43a204e85293848371ffd851bdcb2b"
       def install
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.36/blaxel_Linux_arm64.tar.gz"
-      sha256 "8583942120bf7fd42c06f71a752eee538d7a5a6e99ac398675823a40cc48654f"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.37/blaxel_Linux_arm64.tar.gz"
+      sha256 "1a3595728822b4b56f15101be3a737be27e3c5838350171218de663726300e51"
       def install
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
