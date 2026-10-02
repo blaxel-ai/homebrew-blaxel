@@ -5,12 +5,12 @@
 class Blaxel < Formula
   desc ""
   homepage "https://www.blaxel.ai"
-  version "0.1.118"
+  version "0.1.119"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.118/blaxel_Darwin_x86_64.tar.gz"
-      sha256 "d8737b16d44639c3d9f5dd8000c0767aac939d737ae9e8fda54259310d182b20"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.119/blaxel_Darwin_x86_64.tar.gz"
+      sha256 "9da816d956e427b2cb1f8d586d0baba930676033697443be112199f0bda0da7d"
 
       define_method(:install) do
         bin.install "blaxel"
@@ -18,8 +18,8 @@ class Blaxel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.118/blaxel_Darwin_arm64.tar.gz"
-      sha256 "39beed3cd86baf851c66a7f0657dc51c54e6bc47647c53c886cadb65f8edc848"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.119/blaxel_Darwin_arm64.tar.gz"
+      sha256 "8a26b21b1081bbe575690f41493b7a6b9afb0a0947e7fc4c321fe42c0e058ca9"
 
       define_method(:install) do
         bin.install "blaxel"
@@ -30,16 +30,16 @@ class Blaxel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.118/blaxel_Linux_x86_64.tar.gz"
-      sha256 "949ffb423a0cbef0762daacbf36ce517818930578e36090e59aa3758e47e64d5"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.119/blaxel_Linux_x86_64.tar.gz"
+      sha256 "88dbb78ffee7f1027c875a92e4a2f421cdfdea32fae9f773add30e08ac32b670"
       define_method(:install) do
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.118/blaxel_Linux_arm64.tar.gz"
-      sha256 "693b6c0d862c5f1240f711a311a88cd04424d5571b0980c5d8afa00746c2af21"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.119/blaxel_Linux_arm64.tar.gz"
+      sha256 "00810ecb20dcad039d3c453773724fbff3824d3136aac5ddb1f618e71c32a34b"
       define_method(:install) do
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
@@ -51,12 +51,12 @@ class Blaxel < Formula
     <<~EOS
       Blaxel is a tool to ship AI agents that never slack.
 
-      Blaxel skills for coding agents (Claude Code, Codex, Cursor, ...) are installed
-      the first time you run any bl command after installation or upgrade, into
-      ~/.agents/skills and the agents detected on this machine.
-      Requires Node.js 22.20+, npm and git. Set BL_INSTALL_SKILLS=false to skip.
-      To install or retry manually:
-        bl skills install
+      Finish setting up Blaxel: install the skills and MCP servers for your
+      coding agents (Claude Code, Codex, Cursor, ...) and log in:
+        bl setup
+
+      Otherwise the Blaxel skills are installed the first time you run any bl
+      command after installation or upgrade (BL_INSTALL_SKILLS=false skips them).
       bl upgrade also refreshes the skills. Installation failures never block the CLI.
     EOS
   end
