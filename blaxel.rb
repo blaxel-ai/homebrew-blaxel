@@ -5,12 +5,12 @@
 class Blaxel < Formula
   desc ""
   homepage "https://www.blaxel.ai"
-  version "0.1.126"
+  version "0.1.127"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.126/blaxel_Darwin_x86_64.tar.gz"
-      sha256 "ee930391d49a0591ae5cbc85d1d179d0317782e218e5e08a1e5e017d9cb243d8"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.127/blaxel_Darwin_x86_64.tar.gz"
+      sha256 "594ea3590ae46ce38c249b9c6c7725d613c2af5427e1f8e4918ce67271f590b1"
 
       define_method(:install) do
         bin.install "blaxel"
@@ -18,8 +18,8 @@ class Blaxel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.126/blaxel_Darwin_arm64.tar.gz"
-      sha256 "ed78fad5f4d2e778aad096a878c535f4101bb0428621d08b6b03ec09072af284"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.127/blaxel_Darwin_arm64.tar.gz"
+      sha256 "354a95ae603833e57c789417d3483e5e5d71048ca028f764675e685fe213be39"
 
       define_method(:install) do
         bin.install "blaxel"
@@ -30,16 +30,16 @@ class Blaxel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.126/blaxel_Linux_x86_64.tar.gz"
-      sha256 "70e1ceaf820f4852653a5848facd910898fdb792c7b843f0a3745e2abbbeb9b6"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.127/blaxel_Linux_x86_64.tar.gz"
+      sha256 "a23b387dd309cd37ba381ad9383efe124bad306347c058a6bad2803cffb3b900"
       define_method(:install) do
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.126/blaxel_Linux_arm64.tar.gz"
-      sha256 "86c4667d9926a02fedb1334e6e8dfcfaa94388d34400072172a17111feca2496"
+      url "https://github.com/blaxel-ai/toolkit/releases/download/v0.1.127/blaxel_Linux_arm64.tar.gz"
+      sha256 "73093661b714aed8feb92a1d4c689b0f537f8552357679900ee0d35ad6eabf76"
       define_method(:install) do
         bin.install "blaxel"
         bin.install_symlink "blaxel" => "bl"
